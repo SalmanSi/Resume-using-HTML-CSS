@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europass Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .container{
+            display: flex;
+            width: 100%; /* Full width of the viewport */
+            align-items: stretch; /* This will make both sections the same height */
+
+        }
+        .left-section {
+            display: flex;
+            background-color: #163853;
+            width: 15%; /* Fixed width */
+            padding: 3%;
+            flex-direction: column;
+            justify-content: flex-start; /* Align to the top */
+            align-items: center;
+            color: #ffffff;
+        }
+        .right-section {
+        display: flex;
+        background-color: white;
+        width: 50%; /* Fixed width */
+        padding: 3%;
+        flex-direction: column;
+        justify-content: flex-start; /* Align to the top */
+        align-items: center;
+        color: black;
+        }
+        
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .left-section h3 {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff; /* Adds a thick white line below each heading */
+            padding-bottom: 5px; /* Optional: adds space between heading and the line */
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .education p {
+            margin: 0px 0; /* Reduce the margin between paragraphs */
+        }
+        
+
+
+        .contact, .education, .skills, .languages {
+            text-align: left; 
+            width: 100%; /* Ensures full width for consistent alignment */
+        }
+
+        .skills ul,.languages ul{
+            padding-left: 20px;
+        }
+        .education ul{
+            padding-left: 20px;
+        }
+
+        .contact ul {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0; /* Remove left padding */
+            margin: 0; /* Remove default margin */
+        }
+        .contact ul li {
+            font-size: 16px; /* Adjust text size */
+            font-weight: 300; /* Thinner font weight */
+            line-height: 2.0; /* Optional: Adjust line height for readability */
+        }
+
+        .contact ul li i {
+            margin-right: 8px; /* Space between icon and text */
+
+        }
+        .contact ul li a {
+            color: white; /* Set the color of the link */
+            text-decoration: underline; /* Underline the link */
+    
+        }
+        .skills ul li, .languages ul li,.education ul li {
+            font-size: 16px; /* Make text smaller */
+            font-weight: 300; /* Thinner font weight */
+            line-height: 2.5; /* Optional: Adjust line height for readability */
+        }
+
+        .profile-image{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid black;            
+        }
+
+
+        
+        .name h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #163853;
+            margin-bottom: 5px;
+        }
+
+        .name h2 {
+            font-size: 1.5em;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+
+        .right-section h3 {
+        font-size: 1.2em;
+        color: #163853;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #163853;
+        padding-bottom: 5px;
+        width: 100%; /* Make the h3 take full width */
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Space out the content */
+        align-items: center; /* Center items vertically */
+        }
+
+        .right-section p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .work-experience, .projects, .certifications-skills-achievements {
+            margin-bottom: 30px;
+        }
+
+
+        .right-section ul {
+            padding-left: 20;
+            margin: 0;
+        }
+
+        .right-sectionul li {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+        }
+
+
+        .right-section h2 {
+            font-size: 1.5em;
+            color: #163853;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .certifications-skills-achievements strong {
+            color: #333;
+        }
+
+        .right-section .name {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .name, .profile, .work-experience, .projects, .certifications-skills-achievements {
+            width: 100%;
+        }
+
+        .certifications-skills-achievements p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .title-date {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Space items evenly */
+            align-items: center; /* Center items vertically */
+            width: 100%; /* Make it take the full width */
+        }
+
+        .right-section .date {
+            font-size: 0.9em; /* Adjust font size if necessary */
+            color: #163853; /* Same color or adjust if needed */
+        }
+        #software-engineer {
+            font-size: 1.5em; /* Adjust this value to make the font size smaller */
+            color: grey; /* Change the color to grey */
+            font-weight: 300; /* Makes the font thinner */
+            margin-left: 50px; /* Optional: Remove default margin for better alignment */
+            text-align: left; /* Left align the text */
+        }
+        #myname{
+            margin-left: 50px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="left-section">
+            <div >
+                <img src='images/salman.jpg' alt='Profile Picture of Salman' class=profile-image>
+            </div>
+
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +92-XXXXXXXXXX-X</li>
+                    <li><i class="fas fa-envelope"></i> salmansiddiq566@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/SalmanSi">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="education">
+                <h3>EDUCATION</h3>
+                <div class="bachelors">
+                    <p>2022 - Current</p>
+                    <p><b>National University of Sciences and Technology</b></p>
+                    <ul>
+                        <li>Bachelors of Software Engineering</li>
+                    </ul>
+                </div>
+                <div class="college">
+                    <p>2020 - 2022</p>
+                    <p><b>Roots IVY International</b></p>
+                    <ul>
+                        <li>A-Levels in Pre-Engineering</li>
+                        <li>2nd Place in North Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h3>SKILLS</h3>
+                <ul>
+                    <li>Python, Javascript, C++</li>
+                    <li>Version Control</li>
+                    <li>Web Development</li>
+                    <li>Project Management</li>
+                    <li>Cloud Computing</li>
+                    <li>TensorFlow</li>
+                    <li>Langchain</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h3>LANGUAGES</h3>
+                <ul>
+                    <li>English (Fluent)</li>
+                    <li>Urdu (Fluent)</li>
+                    <li>German (Basics)</li>
+                </ul>
+            </div>
+
+        </section>
+        <section class="right-section">
+            <div class="name"> 
+                <h1 id="myname">Muhammad Salman Siddiq</h1>
+                <h2 id="software-engineer">Software Engineer</h2>
+            </div>
+
+            <div class="profile">
+                <h3>PROFILE</h3>
+                <p>I am a Software Engineering student passionate about machine learning, mathematics, and AI. I specialize in developing LLM-based agents and chatbots, with a focus on natural language processing and computer vision. I’m skilled in leveraging cloud technologies for problem-solving and research, particularly in LLMs. With a strong commitment to innovation, I aim to contribute to projects at the forefront of AI
+                </p>
+            </div>
+            <div class="work-experience">
+                <h2>WORK EXPERIENCE</h2>
+                <div class="MADE IT">
+                    <h3>
+                        MADE IT
+                        <span class="date">Sep 2024 - Current</span>
+                    </h3>
+                                           
+                        <p><b>Machine Learnign Intern</b></p>
+                        <ul>
+                            <li>Created a dress recognition program to identify matching dresses in images.</li>
+                            <li>Used Grounding DINO for dress localization and Meta's SAM model for segmentation.</li>
+                            <li>Converted dress images into embeddings with OpenAI's CLIP model.</li>
+                            <li>Clustered images with K-Means, achieving 80% accuracy in under 5 seconds.</li>
+
+                        </ul>
+                </div>
+
+                <div class="TUKL">
+                        
+                    <h3>TUKL - Deep Learning Lab
+                        <span class="date">May 2024 - Current</span>
+                    </h3>
+                    <p><b>Deep Learnign Intern</b></p>
+                    <ul>
+                        <li>Developed a real-time speaking avatar for user Q&A.</li>
+                        <li>Created a 95%-accurate RAG chatbot using STT and TTS models.</li>
+                        <li>Enhanced knowledge base with LLMs and synchronized lip-sync animations.</li>
+                        <li>Designed a 3D avatar interface using Three.js and React Three Fiber.</li>
+                    </ul>
+                    
+                </div>
+
+
+            </div>
+
+            <div class="projects">
+                <h2>PROJECTS</h2>
+                <div class="Search Engine">
+                    <h3>Search Engine on a Dataset of News Articles
+                        <span class="date">Jan 2024</span>
+                    </h3>
+                    <ul>
+                        <li>Led the development of a Django-based web search engine for efficient information retrieval.</li>
+                        <li>Implemented NLTK for text parsing and indexing of 100,000+ news articles.</li>
+                        <li>Optimized search performance to deliver results in under 100 milliseconds.</li>
+                        <li>Created a dynamic system for seamless addition of new articles to the archive.</li>
+                    </ul>
+                    
+
+                </div>
+
+            </div>
+            <div class="certifications-skills-achievements">
+                <h3>Certifications, Skills & Achievements</h3>
+                <p>
+                    <strong>Certifications:</strong> Stanford Machine Learning Specialization (Coursera), Deep Learning Specialization (Coursera) <br>
+                    <strong>Languages:</strong> Python, C, C++ <br>
+                    <strong>Tools:</strong> Git, Django, matplotlib, TensorFlow, NLTK, Latex <br>
+                    <strong>Achievements:</strong> Second place in North Pakistan in A-Levels examinations, Runner-up in a coding competition at NUST.
+                </p>
+            </div>
+            
+
+
+        </section>
+
+    </div>
+
+</body>
+
+
+
+
+
+</html>

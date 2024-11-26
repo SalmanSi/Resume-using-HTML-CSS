@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Selector</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .selector {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .selector h2 {
+            margin-top: 0;
+        }
+        .thumbnail {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .cv-container {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        .cv-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="selector">
+            <h2>Select CV</h2>
+            <a href="cv1.html" target="cv-display">
+                <img src="images/cv1.jpg" alt="CV 1 Thumbnail" class="thumbnail">
+            </a>
+            <a href="cv2.html" target="cv-display">
+                <img src="images/cv2.jpg" alt="CV 2 Thumbnail" class="thumbnail">
+            </a>
+        </div>
+        <div class="cv-container">
+            <iframe name="cv-display" class="cv-frame" src="welcome.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

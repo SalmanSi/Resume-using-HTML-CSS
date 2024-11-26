@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .skills li, .languages li {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin: 0 5px 10px 0;
+            font-size: 0.9em;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <img src="images/salman.jpg" alt="Muhammad Salman Siddiq" class="profile-image">
+                <div>
+                    <h1>Muhammad Salman Siddiq</h1>
+                    <p class="tagline">Innovative Software Engineer | AI Enthusiast</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>📞 +92-XXXXXXXXXX-X</p>
+                <p>📧 salmansiddiq566@gmail.com</p>
+                <p>📍 Karachi, Pakistan</p>
+                <p>🔗 <a href="https://github.com/SalmanSi">GitHub</a></p>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>Skills</h2>
+                    <ul class="skills">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Web Development</li>
+                        <li>Cloud Computing</li>
+                        <li>TensorFlow</li>
+                        <li>Langchain</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Languages</h2>
+                    <ul class="languages">
+                        <li>English (Fluent)</li>
+                        <li>Urdu (Fluent)</li>
+                        <li>German (Basics)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3>National University of Sciences and Technology</h3>
+                        <p>Bachelors of Software Engineering</p>
+                        <p class="date">2022 - Current</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Roots IVY International</h3>
+                        <p>A-Levels in Pre-Engineering</p>
+                        <p>2nd Place in North Pakistan</p>
+                        <p class="date">2020 - 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="section">
+                    <h2>Profile</h2>
+                    <p>A passionate Software Engineering student with a focus on machine learning, mathematics, and AI. Specializing in developing LLM-based agents and chatbots, with expertise in natural language processing and computer vision. Skilled in leveraging cloud technologies for innovative problem-solving and research, particularly in LLMs.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Work Experience</h2>
+                    <div class="experience-item">
+                        <h3>Machine Learning Intern - MADE IT</h3>
+                        <p class="date">Sep 2024 - Current</p>
+                        <ul>
+                            <li>Created a dress recognition program using Grounding DINO and Meta's SAM model.</li>
+                            <li>Implemented image embedding with OpenAI's CLIP model and K-Means clustering.</li>
+                            <li>Achieved 80% accuracy in under 5 seconds for dress matching.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Deep Learning Intern - TUKL Deep Learning Lab</h3>
+                        <p class="date">May 2024 - Current</p>
+                        <ul>
+                            <li>Developed a real-time speaking avatar for user Q&A with 95% accuracy.</li>
+                            <li>Created a RAG chatbot using STT and TTS models.</li>
+                            <li>Designed a 3D avatar interface using Three.js and React Three Fiber.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Projects</h2>
+                    <div class="project-item">
+                        <h3>Search Engine on a Dataset of News Articles</h3>
+                        <p class="date">Jan 2024</p>
+                        <ul>
+                            <li>Developed a Django-based web search engine for efficient information retrieval.</li>
+                            <li>Implemented NLTK for text parsing and indexing of 100,000+ news articles.</li>
+                            <li>Optimized search performance to deliver results in under 100 milliseconds.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Certifications & Achievements</h2>
+                    <ul>
+                        <li>Stanford Machine Learning Specialization (Coursera)</li>
+                        <li>Deep Learning Specialization (Coursera)</li>
+                        <li>Runner-up in a coding competition at NUST</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
